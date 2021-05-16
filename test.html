@@ -106,6 +106,26 @@
                 It was revived that year as four direct-to-video films, the last of which was released in early 2009. Comedy Central entered into an agreement with 20th Century Fox Television to syndicate the existing episodes and air the films as 16 new, half-hour episodes, constituting a fifth season.
             </p>
         </div>
+        <br />
+
+        <div class="w3-container w3-card w3-white">
+            <div class="w3-container">
+                <br />
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-grey w3-hover-blue w3-round" style="font-weight:bold;font-size:small">Click here to see my CV</button>
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-card w3-animate-zoom">
+                        <header class="w3-container w3-black" style="background-color:black">
+                            <span onclick="stop()" class="w3-button w3-display-topright" id="close">&times;</span>
+                            <h2 style="text-align:center;text-decoration:underline;font-weight:bold;color:white">My CV</h2>
+                        </header>
+                        <div class="w3-container" style="background-color:black">
+                            <iframe style="width:100%" height="500" src="https://docs.google.com/document/d/e/2PACX-1vSez95v4jA6IZiZChpsoqS6-ymB_qaYJqY3Q8b0gX1pNbkC3PphMCX1jC1md0xqcfOMV-W1BaRWvYzh/pub?embedded=true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
 
     </div>
 
@@ -121,6 +141,17 @@
         function w3_close() {
             document.getElementById("mySidebar").style.display = "none";
             document.getElementById("myOverlay").style.display = "none";
+        }
+
+        var modal = document.getElementById('id01');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function stop() {
+            modal.style.display = "none"
         }
     </script>
 
